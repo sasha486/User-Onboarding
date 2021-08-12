@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+
+.container{
+  margin: 10px;
+}
+.error {
+  font-size: 1.2rem;
+  color: red;
+}
+
+.terms {
+  display: inline-block;
+  align-self: self-start;
+  margin: 10px;
+}
+
+.terms input {
+  width: 15px;
+  display: inline-block;
+  margin-right: 5px;
+}
+button{
+  padding: 5px;
+}
+
+button:hover {
+  background-image: none;
+  background-color: #91a5df;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
