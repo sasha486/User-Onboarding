@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
-
 import axios from 'axios';
 import * as yup from 'yup';
 
@@ -89,70 +87,68 @@ export default function UserForm() {
     setValue(newFormData);
   };
   return (
-    <div className= ' container ui segment'>
+    <div className=' container ui segment'>
       <div>
         <form className='ui form' onSubmit={formSubmit}>
-           <div className='field'>
-          <label className='label' htmlFor='name'>
-            Name:
-            <input
-              type='text'
-              name='name'
-              value={value.name}
-              onChange={inputChange}
-            />
-            {errors.name.length > 0 ? (
-              <p className='error'>{errors.name}</p>
-            ) : null}
-          
-          </label>
+          <div className='field'>
+            <label className='label' htmlFor='name'>
+              Name:
+              <input
+                type='text'
+                name='name'
+                value={value.name}
+                onChange={inputChange}
+              />
+              {errors.name.length > 0 ? (
+                <p className='error'>{errors.name}</p>
+              ) : null}
+            </label>
           </div>
-           <div className='field'>
-          <label className='label' htmlFor='email'>
-            Email:
-            <input
-              type='text'
-              name='email'
-              value={value.email}
-              onChange={inputChange}
-            />
-            {errors.email.length > 0 ? (
-              <p className='error'>{errors.email}</p>
-            ) : null}
-          </label>
+          <div className='field'>
+            <label className='label' htmlFor='email'>
+              Email:
+              <input
+                type='text'
+                name='email'
+                value={value.email}
+                onChange={inputChange}
+              />
+              {errors.email.length > 0 ? (
+                <p className='error'>{errors.email}</p>
+              ) : null}
+            </label>
           </div>
-           <div className='field'>
-          <label className='label' htmlFor='email'>
-            Password:
-            <input
-              type='password'
-              name='password'
-              value={value.password}
-              onChange={inputChange}
-            />
-            {errors.password.length > 0 ? (
-              <p className='error'>{errors.password}</p>
-            ) : null}
-          </label>
+          <div className='field'>
+            <label className='label' htmlFor='email'>
+              Password:
+              <input
+                type='password'
+                name='password'
+                value={value.password}
+                onChange={inputChange}
+              />
+              {errors.password.length > 0 ? (
+                <p className='error'>{errors.password}</p>
+              ) : null}
+            </label>
           </div>
-             <div className='field'>
-          <label className='terms' htmlFor='terms' >
-            <input
-              type='checkbox'
-              name='terms'
-              checked={value.terms}
-              onChange={inputChange}
-            />
-            Terms & Conditions
-          </label>
+          <div className='field'>
+            <label className='terms' htmlFor='terms'>
+              <input
+                type='checkbox'
+                name='terms'
+                checked={value.terms}
+                onChange={inputChange}
+              />
+              Terms & Conditions
+            </label>
           </div>
           <br />
 
-          <button className = "ui button"disabled={buttonDisabled} type='submit'>
+          <button className='ui button' disabled={buttonDisabled} type='submit'>
             Submit
           </button>
           <pre>{JSON.stringify(user, null, 2)}</pre>
-        
         </form>
       </div>
     </div>
